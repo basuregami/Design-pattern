@@ -7,93 +7,93 @@ use App\Database\Connection;
 $connectionObj =  Connection::getInstance();
 $connection = $connectionObj->getConnection();
 
-echo "--------------------------------------------------------------------------------------------------";
-echo "<br/>";
-echo "starting database connection";
-echo '<br/>';
-echo "--------------------------------------------------------------------------------------------------";
-echo '<br/>';
-echo "Dumping connection Object";
-echo '<br/>';
-var_dump($connection);
-echo '<br/>';
-echo '----------------------------------------------------------------------------------------------------';
-echo '<br/>';
-echo "Insert data to the table";
-echo '<br/>';
-echo '----------------------------------------------------------------------------------------------------';
+// echo "--------------------------------------------------------------------------------------------------";
+// echo "<br/>";
+// echo "starting database connection";
+// echo '<br/>';
+// echo "--------------------------------------------------------------------------------------------------";
+// echo '<br/>';
+// echo "Dumping connection Object";
+// echo '<br/>';
+// var_dump($connection);
+// echo '<br/>';
+// echo '----------------------------------------------------------------------------------------------------';
+// echo '<br/>';
+// echo "Insert data to the table";
+// echo '<br/>';
+// echo '----------------------------------------------------------------------------------------------------';
 
 
-$sql = "INSERT INTO departments (name, code) VALUES (?, ?)";
+// $sql = "INSERT INTO departments (name, code) VALUES (?, ?)";
 
-$dbStatement = $connectionObj->prepareStatement($sql);
+// $dbStatement = $connectionObj->prepareStatement($sql);
 
-echo '----------------------------------------------------------------------------------------------------';
-echo '<br/>';
-echo "preparing the database for the sql statement";
-echo '<br/>';
-echo '----------------------------------------------------------------------------------------------------';
+// echo '----------------------------------------------------------------------------------------------------';
+// echo '<br/>';
+// echo "preparing the database for the sql statement";
+// echo '<br/>';
+// echo '----------------------------------------------------------------------------------------------------';
 
-$dbStatement->bind_param("ss", $deparmentName, $departmentCode);
+// $dbStatement->bind_param("ss", $deparmentName, $departmentCode);
 
-$deparmentName = 'support';
-$departmentCode = 'support';
+// $deparmentName = 'support';
+// $departmentCode = 'support';
 
-echo '----------------------------------------------------------------------------------------------------';
-echo '<br/>';
-echo "Inserting one record in the database.";
-echo '<br/>';
-echo '----------------------------------------------------------------------------------------------------';
-$result1 = $connectionObj->execute();
+// echo '----------------------------------------------------------------------------------------------------';
+// echo '<br/>';
+// echo "Inserting one record in the database.";
+// echo '<br/>';
+// echo '----------------------------------------------------------------------------------------------------';
+// $result1 = $connectionObj->execute();
 
-echo '----------------------------------------------------------------------------------------------------';
-echo '<br/>';
-echo "Output of the first result. Bool value";
-echo '<br/>';
-echo $result1;
-echo '<br/>';
-echo '----------------------------------------------------------------------------------------------------';
-
-
-$departmentCode = 'adfa';
-$deparmentName = 'asasdf';
-echo '----------------------------------------------------------------------------------------------------';
-echo '<br/>';
-echo "Inserting second record in the database.";
-echo '<br/>';
-echo '----------------------------------------------------------------------------------------------------';
-
-$result2 = $connectionObj->execute();
-
-echo '----------------------------------------------------------------------------------------------------';
-echo '<br/>';
-echo "Output of the first result. Bool value";
-echo '<br/>';
-echo $result2;
-echo '<br/>';
-echo '----------------------------------------------------------------------------------------------------';
+// echo '----------------------------------------------------------------------------------------------------';
+// echo '<br/>';
+// echo "Output of the first result. Bool value";
+// echo '<br/>';
+// echo $result1;
+// echo '<br/>';
+// echo '----------------------------------------------------------------------------------------------------';
 
 
+// $departmentCode = 'adfa';
+// $deparmentName = 'asasdf';
+// echo '----------------------------------------------------------------------------------------------------';
+// echo '<br/>';
+// echo "Inserting second record in the database.";
+// echo '<br/>';
+// echo '----------------------------------------------------------------------------------------------------';
+
+// $result2 = $connectionObj->execute();
+
+// echo '----------------------------------------------------------------------------------------------------';
+// echo '<br/>';
+// echo "Output of the first result. Bool value";
+// echo '<br/>';
+// echo $result2;
+// echo '<br/>';
+// echo '----------------------------------------------------------------------------------------------------';
 
 
-$statement = $connectionObj->closeStatement();
 
-echo '----------------------------------------------------------------------------------------------------';
-echo '<br/>';
-echo "preparing the close the sql statement. Bool value";
-echo '<br/>';
-echo $statement;
-echo '<br/>';
-echo '----------------------------------------------------------------------------------------------------';
 
-$db = $connectionObj->close();
-echo '----------------------------------------------------------------------------------------------------';
-echo '<br/>';
-echo "preparing the close the database connection. Bool value";
-echo '<br/>';
-echo $db;
-echo '<br/>';
-echo '----------------------------------------------------------------------------------------------------';
+// $statement = $connectionObj->closeStatement();
+
+// echo '----------------------------------------------------------------------------------------------------';
+// echo '<br/>';
+// echo "preparing the close the sql statement. Bool value";
+// echo '<br/>';
+// echo $statement;
+// echo '<br/>';
+// echo '----------------------------------------------------------------------------------------------------';
+
+// $db = $connectionObj->close();
+// echo '----------------------------------------------------------------------------------------------------';
+// echo '<br/>';
+// echo "preparing the close the database connection. Bool value";
+// echo '<br/>';
+// echo $db;
+// echo '<br/>';
+// echo '----------------------------------------------------------------------------------------------------';
 
 
 //connecting to the database
