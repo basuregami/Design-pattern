@@ -57,4 +57,23 @@ abstract class BaseRepository
         }
         return $this->model;
     }
+
+    public function getAll()
+    {
+        $sql = "SELECT * FROM {$this->model->table}";
+        $this->connection->prepareStatement($sql);
+        $this->connection->execute();
+        $result = $this->connection->getResult();
+
+        $response = [];
+        foreach ($row = $result->fetch_assoc() as $key => $value)
+        {
+            // $this->model->$key = $value;
+            // print_r($this->model->$key = 'test');
+            $this->model->$key = $value;
+
+            array_push($response, $this->model);
+        }
+        return $response;
+    }
 }

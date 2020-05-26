@@ -6,7 +6,9 @@ use App\Repository\Implementation\User\UserRepository;
 
 try {
 	$userRepo = new UserRepository;
-	$user = $userRepo->findById(2);
+	// $user = $userRepo->findById(2);
+	$user = $userRepo->getAll();
+	echo '<pre>';
 	print_r($user);
 
 } catch (\Exception $e) {
