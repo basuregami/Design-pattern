@@ -85,6 +85,14 @@ class Connection {
 
 	}
 
+	public function bind(string $type, ...$bindValue)
+	{
+		print($type);
+
+		print_r($bindValue);
+		die;
+	}
+
 	/**
 	* Execute the sql statement
 	*

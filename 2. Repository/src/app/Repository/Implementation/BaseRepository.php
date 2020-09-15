@@ -76,4 +76,24 @@ abstract class BaseRepository
         }
         return $response;
     }
+
+    public function findBy($attribute, $value)
+    {   
+        
+        $this->connection->bind('SSS', 'ram','sam','hari', 'gita');
+        $sql = "SELECT * FROM {$this->model->table} WHERE {$attribute} = {$value}" ; 
+        $this->connection->prepareStatement($sql);
+        $this->connection->execute();
+        $result = $this->connection->getResult();
+
+        print_r($result);
+        die;
+
+        foreach ($row = $result->fetch_assoc() as $key => $value)
+        {
+            $this->model->$key = $value;
+
+        }
+        return $response;
+    }
 }

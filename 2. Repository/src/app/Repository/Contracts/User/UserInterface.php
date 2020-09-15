@@ -14,4 +14,5 @@ interface UserInterface
    */
   public function findById($id, $columns = array('*'));
 
+
 }

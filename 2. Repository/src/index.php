@@ -7,7 +7,9 @@ use App\Repository\Implementation\User\UserRepository;
 try {
 	$userRepo = new UserRepository;
 	// $user = $userRepo->findById(2);
-	$user = $userRepo->getAll();
+	// $user = $userRepo->getAll();
+	$user = $userRepo->findBy('email', 'ariodidas@gmail.com');
+
 	echo '<pre>';
 	print_r($user);
 

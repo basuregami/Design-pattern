@@ -7,6 +7,14 @@ use App\Database\Connection;
 $connectionObj =  Connection::getInstance();
 $connection = $connectionObj->getConnection();
 
+echo '<pre>';
+var_dump($connection);
+
+$connectionObj2 =  Connection::getInstance();
+$connection2 = $connectionObj2->getConnection();
+echo '<pre>';
+
+var_dump($connection);
 // echo "--------------------------------------------------------------------------------------------------";
 // echo "<br/>";
 // echo "starting database connection";
